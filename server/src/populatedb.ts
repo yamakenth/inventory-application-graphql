@@ -88,7 +88,8 @@ function productCreate(
 }
 
 function createCategories(cb: () => void) {
-  async.parallel(
+  // series to preserve order in array
+  async.series(
     [
       (callback) => {
         categoryCreate(
@@ -124,7 +125,8 @@ function createCategories(cb: () => void) {
 }
 
 function createManufacturers(cb: () => void) {
-  async.parallel(
+  // series to preserve order in array
+  async.series(
     [
       (callback) => manufacturerCreate("Apple", callback),
       (callback) => manufacturerCreate("Dell", callback),
