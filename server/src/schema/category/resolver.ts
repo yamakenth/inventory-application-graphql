@@ -1,45 +1,42 @@
+import Category from "../../models/category";
 import { categories } from "../../sampleData";
-import { Category } from "./type";
 
-export function getCategory(id: string): Category | undefined {
-  return categories.find((category) => category.id === id);
+export function getCategory(id: string) {
+  return Category.findById(id);
 }
 
-export function getCategories(): Category[] {
-  return categories;
+export function getCategories() {
+  return Category.find();
 }
 
-export function addCategory(args: {
-  name: string;
-  description: string;
-}): Category {
-  const category = {
+export function addCategory(args: { name: string; description: string }) {
+  const category = new Category({
     id: String(categories.length),
     name: args.name,
     description: args.description,
-  };
+  });
 
-  categories.push(category);
-  return category;
+  return category.save();
 }
 
 export function editCategory(args: {
   id: string;
   name: string;
   description: string;
-}): Category {
-  const category = {
-    id: args.id,
-    name: args.name,
-    description: args.description,
-  };
-
-  categories[Number(args.id)] = category;
-  return category;
+}) {
+  return Category.findByIdAndUpdate(
+    args.id,
+    {
+      $set: {
+        id: args.id,
+        name: args.name,
+        description: args.description,
+      },
+    },
+    { new: true }
+  );
 }
 
-export function deleteCategory(args: { id: string }): Category {
-  const category = categories[Number(args.id)];
-  categories.splice(Number(args.id), 1);
-  return category;
+export function deleteCategory(args: { id: string }) {
+  return Category.findByIdAndRemove(args.id);
 }
