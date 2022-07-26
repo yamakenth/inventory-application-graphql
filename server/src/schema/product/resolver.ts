@@ -1,7 +1,7 @@
 import { products } from "../../sampleData";
 import { Product } from "./type";
 
-export function getProduct(id: Product["id"]): Product | undefined {
+export function getProduct(id: string): Product | undefined {
   return products.find((product) => product.id === id);
 }
 
@@ -10,12 +10,12 @@ export function getProducts(): Product[] {
 }
 
 export function addProduct(args: {
-  name: Product["name"];
-  description: Product["description"];
-  price: Product["price"];
-  stock: Product["stock"];
-  manufacturerId: Product["manufacturerId"];
-  categoryId: Product["categoryId"];
+  name: string;
+  description: string[];
+  price: number;
+  stock: number;
+  manufacturerId: string;
+  categoryId: string;
 }): Product {
   const product = {
     id: String(products.length),
@@ -32,13 +32,13 @@ export function addProduct(args: {
 }
 
 export function editProduct(args: {
-  id: Product["id"];
-  name: Product["name"];
-  description: Product["description"];
-  price: Product["price"];
-  stock: Product["stock"];
-  manufacturerId: Product["manufacturerId"];
-  categoryId: Product["categoryId"];
+  id: string;
+  name: string;
+  description: string[];
+  price: number;
+  stock: number;
+  manufacturerId: string;
+  categoryId: string;
 }): Product {
   const product = {
     id: args.id,
@@ -54,7 +54,7 @@ export function editProduct(args: {
   return product;
 }
 
-export function deleteProduct(args: { id: Product["id"] }): Product {
+export function deleteProduct(args: { id: string }): Product {
   const product = products[Number(args.id)];
   products.splice(Number(args.id), 1);
   return product;

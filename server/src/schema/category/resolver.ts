@@ -1,7 +1,7 @@
 import { categories } from "../../sampleData";
 import { Category } from "./type";
 
-export function getCategory(id: Category["id"]): Category | undefined {
+export function getCategory(id: string): Category | undefined {
   return categories.find((category) => category.id === id);
 }
 
@@ -10,8 +10,8 @@ export function getCategories(): Category[] {
 }
 
 export function addCategory(args: {
-  name: Category["name"];
-  description: Category["description"];
+  name: string;
+  description: string;
 }): Category {
   const category = {
     id: String(categories.length),
@@ -24,9 +24,9 @@ export function addCategory(args: {
 }
 
 export function editCategory(args: {
-  id: Category["id"];
-  name: Category["name"];
-  description: Category["description"];
+  id: string;
+  name: string;
+  description: string;
 }): Category {
   const category = {
     id: args.id,
@@ -38,7 +38,7 @@ export function editCategory(args: {
   return category;
 }
 
-export function deleteCategory(args: { id: Category["id"] }): Category {
+export function deleteCategory(args: { id: string }): Category {
   const category = categories[Number(args.id)];
   categories.splice(Number(args.id), 1);
   return category;

@@ -1,9 +1,7 @@
 import { manufacturers } from "../../sampleData";
 import { Manufacturer } from "./type";
 
-export function getManufacturer(
-  id: Manufacturer["id"]
-): Manufacturer | undefined {
+export function getManufacturer(id: string): Manufacturer | undefined {
   return manufacturers.find((manufacturer) => manufacturer.id === id);
 }
 
@@ -11,9 +9,7 @@ export function getManufacturers(): Manufacturer[] {
   return manufacturers;
 }
 
-export function addManufacturer(args: {
-  name: Manufacturer["name"];
-}): Manufacturer {
+export function addManufacturer(args: { name: string }): Manufacturer {
   const manufacturer = {
     id: String(manufacturers.length),
     name: args.name,
@@ -24,8 +20,8 @@ export function addManufacturer(args: {
 }
 
 export function editManufacturer(args: {
-  id: Manufacturer["id"];
-  name: Manufacturer["name"];
+  id: string;
+  name: string;
 }): Manufacturer {
   const manufacturer = {
     id: args.id,
@@ -36,9 +32,7 @@ export function editManufacturer(args: {
   return manufacturer;
 }
 
-export function deleteManufacturer(args: {
-  id: Manufacturer["id"];
-}): Manufacturer {
+export function deleteManufacturer(args: { id: string }): Manufacturer {
   const manufacturer = manufacturers[Number(args.id)];
   manufacturers.splice(Number(args.id), 1);
   return manufacturer;
