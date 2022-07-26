@@ -1,5 +1,4 @@
 import Category from "../../models/category";
-import { categories } from "../../sampleData";
 
 export function getCategory(id: string) {
   return Category.findById(id);
@@ -11,7 +10,6 @@ export function getCategories() {
 
 export function addCategory(args: { name: string; description: string }) {
   const category = new Category({
-    id: String(categories.length),
     name: args.name,
     description: args.description,
   });

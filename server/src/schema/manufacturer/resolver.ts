@@ -1,5 +1,4 @@
 import Manufacturer from "../../models/manufacturer";
-import { manufacturers } from "../../sampleData";
 
 export function getManufacturer(id: string) {
   return Manufacturer.findById(id);
@@ -11,7 +10,6 @@ export function getManufacturers() {
 
 export function addManufacturer(args: { name: string }) {
   const manufacturer = new Manufacturer({
-    id: String(manufacturers.length),
     name: args.name,
   });
 

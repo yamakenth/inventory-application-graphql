@@ -1,12 +1,11 @@
-import { products } from "../../sampleData";
-import { Product } from "./type";
+import Product from "../../models/product";
 
-export function getProduct(id: string): Product | undefined {
-  return products.find((product) => product.id === id);
+export function getProduct(id: string) {
+  return Product.findById(id);
 }
 
-export function getProducts(): Product[] {
-  return products;
+export function getProducts() {
+  return Product.find();
 }
 
 export function addProduct(args: {
@@ -16,19 +15,17 @@ export function addProduct(args: {
   stock: number;
   manufacturerId: string;
   categoryId: string;
-}): Product {
-  const product = {
-    id: String(products.length),
+}) {
+  const product = new Product({
     name: args.name,
     description: args.description,
     price: args.price,
     stock: args.stock,
     manufacturerId: args.manufacturerId,
     categoryId: args.categoryId,
-  };
+  });
 
-  products.push(product);
-  return product;
+  return product.save();
 }
 
 export function editProduct(args: {
@@ -39,23 +36,24 @@ export function editProduct(args: {
   stock: number;
   manufacturerId: string;
   categoryId: string;
-}): Product {
-  const product = {
-    id: args.id,
-    name: args.name,
-    description: args.description,
-    price: args.price,
-    stock: args.stock,
-    manufacturerId: args.manufacturerId,
-    categoryId: args.categoryId,
-  };
-
-  products[Number(args.id)] = product;
-  return product;
+}) {
+  return Product.findByIdAndUpdate(
+    args.id,
+    {
+      $set: {
+        id: args.id,
+        name: args.name,
+        description: args.description,
+        price: args.price,
+        stock: args.stock,
+        manufacturerId: args.manufacturerId,
+        categoryId: args.categoryId,
+      },
+    },
+    { new: true }
+  );
 }
 
-export function deleteProduct(args: { id: string }): Product {
-  const product = products[Number(args.id)];
-  products.splice(Number(args.id), 1);
-  return product;
+export function deleteProduct(args: { id: string }) {
+  return Product.findByIdAndRemove(args.id);
 }

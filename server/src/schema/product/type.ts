@@ -11,16 +11,6 @@ import { CategoryType } from "../category/type";
 import { getManufacturer } from "../manufacturer/resolver";
 import { ManufacturerType } from "../manufacturer/type";
 
-export interface Product {
-  id: string;
-  name: string;
-  description: string[];
-  price: number;
-  stock: number;
-  manufacturerId: string;
-  categoryId: string;
-}
-
 export const ProductType = new GraphQLObjectType({
   name: "Product",
   fields: () => ({
