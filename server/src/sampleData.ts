@@ -25,7 +25,7 @@ export const categories = [
   },
 ];
 
-export const manufactureres = [
+export const manufacturers = [
   { id: "0", name: "Apple" },
   { id: "1", name: "Dell" },
   { id: "2", name: "Samsung" },

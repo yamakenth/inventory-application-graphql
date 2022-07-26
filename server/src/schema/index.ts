@@ -1,6 +1,11 @@
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
 import { AddCategory, DeleteCategory, EditCategory } from "./category/mutation";
 import { GetCategories, GetCategory } from "./category/query";
+import {
+  AddManufacturer,
+  DeleteManufacturer,
+  EditManufacturer,
+} from "./manufacturer/mutation";
 import { GetManufacturer, GetManufacturers } from "./manufacturer/query";
 
 const Query = new GraphQLObjectType({
@@ -19,6 +24,9 @@ const Mutation = new GraphQLObjectType({
     addCategory: AddCategory,
     editCategory: EditCategory,
     deleteCategory: DeleteCategory,
+    addManufacturer: AddManufacturer,
+    editManufacturer: EditManufacturer,
+    deleteManufacturer: DeleteManufacturer,
   },
 });
 
