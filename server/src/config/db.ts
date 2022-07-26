@@ -6,4 +6,5 @@ export default function connectDB() {
   mongoose.connect(mongoDB);
   const db = mongoose.connection;
   db.on("error", console.error.bind(console, "MongoDB connection error:"));
+  db.once("open", () => console.log(`MongoDB Connected: ${db.host}`));
 }
