@@ -1,7 +1,13 @@
 import { Schema, model } from "mongoose";
 
-const ManufacturerSchema = new Schema({
+interface IManufacturer {
+  name: string;
+}
+
+const ManufacturerSchema = new Schema<IManufacturer>({
   name: { type: String, required: true, maxLength: 100 },
 });
 
-export default model("Manufacturer", ManufacturerSchema);
+const Manufacturer = model<IManufacturer>("Manufacturer", ManufacturerSchema);
+
+export default Manufacturer;
