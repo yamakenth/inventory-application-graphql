@@ -2,6 +2,7 @@ import {
   GraphQLFloat,
   GraphQLID,
   GraphQLInt,
+  GraphQLList,
   GraphQLObjectType,
   GraphQLString,
 } from "graphql";
@@ -25,7 +26,7 @@ export const ProductType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    description: { type: GraphQLString },
+    description: { type: GraphQLList(GraphQLString) },
     price: { type: GraphQLFloat },
     stock: { type: GraphQLInt },
     manufacturer: {
