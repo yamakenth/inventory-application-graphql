@@ -10,8 +10,8 @@ export function getCategories(): Category[] {
 }
 
 export function addCategory(args: {
-  name: string;
-  description: string;
+  name: Category["name"];
+  description: Category["description"];
 }): Category {
   const category = {
     id: String(categories.length),
@@ -24,9 +24,9 @@ export function addCategory(args: {
 }
 
 export function editCategory(args: {
-  id: string;
-  name: string;
-  description: string;
+  id: Category["id"];
+  name: Category["name"];
+  description: Category["description"];
 }): Category {
   const category = {
     id: args.id,
@@ -38,7 +38,7 @@ export function editCategory(args: {
   return category;
 }
 
-export function deleteCategory(args: { id: string }): Category {
+export function deleteCategory(args: { id: Category["id"] }): Category {
   const category = categories[Number(args.id)];
   categories.splice(Number(args.id), 1);
   return category;
