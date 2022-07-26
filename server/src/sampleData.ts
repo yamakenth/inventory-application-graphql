@@ -1,24 +1,24 @@
 export const categories = [
   {
-    id: "6200dc2fa7a81c7b7cba7e6b",
+    id: "0",
     name: "Laptop",
     description:
       "A laptop, laptop computer, or notebook computer is a small, portable personal computer (PC) with a screen and alphanumeric keyboard.",
   },
   {
-    id: "6200dc30a7a81c7b7cba7e6e",
+    id: "1",
     name: "Tablet",
     description:
       "A tablet is a wireless, portable personal computer with a touchscreen interface. The tablet form factor is typically smaller than a notebook computer, but larger than a smartphone.",
   },
   {
-    id: "6200dc30a7a81c7b7cba7e70",
+    id: "2",
     name: "Smartphone",
     description:
       "A smartphone is a cell phone that allows you to do more than make phone calls and send text messages. Smartphones can browse the Internet and run software programs like a computer.",
   },
   {
-    id: "6200dc30a7a81c7b7cba7e72",
+    id: "3",
     name: "Accessory",
     description:
       "Equipment that supports other equipment. For example, smartphone accessories include phone cases, chargers and cables.",
@@ -26,15 +26,29 @@ export const categories = [
 ];
 
 export const manufactureres = [
-  { id: "6200dc30a7a81c7b7cba7e74", name: "Apple" },
-  { id: "6200dc30a7a81c7b7cba7e76", name: "Dell" },
-  { id: "6200dc30a7a81c7b7cba7e78", name: "Samsung" },
-  { id: "6200dc30a7a81c7b7cba7e7a", name: "Sony" },
+  { id: "0", name: "Apple" },
+  { id: "1", name: "Dell" },
+  { id: "2", name: "Samsung" },
+  { id: "3", name: "Sony" },
 ];
 
 export const products = [
   {
-    id: "6200dc30a7a81c7b7cba7e7c",
+    id: "0",
+    name: "Galaxy Chromebook - 13.3 inches - 8 GB RAM",
+    description: [
+      "Crystal clarity. Vivid color: Experience superior picture quality and fully expansive color, contrast and depth with the 4K AMOLED touchscreen display to take your work and play to the next level.",
+      "Split-second productivity: Boot up in as fast as 6 seconds and hit the ground running. Get ample storage with 256GB SSD and work, play and multitask seamlessly.",
+      "Stroke of genius: Take notes, sketch ideas and edit documents easily and accurately with the built-in pen that fits seamlessly into Galaxy Chromebook's ultra-slim design.",
+      "Speedy. Simple. Secure: Chrome OS is the speedy, simple and secure operating system that powers Chromebooks. It is designed to feel intuitive and helpful every step of the way. It comes with the Google Assistant which helps you multitask and control smart devices. Plus, with apps from the Google Play Store, you can get work done, watch your favorite shows or play your favorite games.",
+    ],
+    manufacturerId: "6200dc30a7a81c7b7cba7e78",
+    categoryId: "6200dc2fa7a81c7b7cba7e6b",
+    price: 689.26,
+    stock: 200,
+  },
+  {
+    id: "1",
     name: "iPhone 11 [128GB, Purple]",
     description: [
       "6.1-inch Liquid Retina HD LCD display",
@@ -52,7 +66,7 @@ export const products = [
     stock: 50,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e7e",
+    id: "2",
     name: "iPad Air - 10.9 inches - 256 GB RAM",
     description: [
       "Stunning 10.9-inch Liquid Retina display with True Tone and P3 wide color",
@@ -69,7 +83,7 @@ export const products = [
     stock: 25,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e7d",
+    id: "3",
     name: "MacBook Pro - 13.3 inches - 8 GB RAM",
     description: [
       "Apple-designed M1 chip for a giant leap in CPU, GPU, and machine learning performance",
@@ -89,7 +103,7 @@ export const products = [
     stock: 100,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e80",
+    id: "4",
     name: "XPS 13 9310 - 13.4 inches - 16 GB RAM",
     description: [
       "See Every Detail: The FHD+ (1920 x 1200) 500-nit touchscreen display offers pinpoint accuracy for all your computing needs. See the detail of every pixel in photos without needing to zoom in.",
@@ -105,7 +119,7 @@ export const products = [
     stock: 45,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e81",
+    id: "5",
     name: "Wired Keyboard - Black KB216 (580-ADMT)",
     description: [
       "The Dell Wired Keyboard provides a convenient keyboard solution for everyday home or office computing uses.",
@@ -120,7 +134,7 @@ export const products = [
     stock: 500,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e7f",
+    id: "6",
     name: "AirPods (2nd Generation)",
     description: [
       "Quick access to Siri by saying “ Hey Siri ”",
@@ -134,7 +148,7 @@ export const products = [
     stock: 200,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e82",
+    id: "7",
     name: "Tab A7 Lite - 8.7 inches - 3 GB RAM",
     description: [
       "THE ENTERTAINMENT GOES WHERE YOU GO: With its compact 8.7” screen, slim design and sturdy metal frame, Galaxy Tab A7 Lite is perfectly sized for entertainment on the go",
@@ -148,7 +162,7 @@ export const products = [
     stock: 500,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e84",
+    id: "8",
     name: "Galaxy S21 FE 5G Cell Phone, Factory Unlocked, 128 GB",
     description: [
       "SMOOTH SCROLLING: The 120Hz display delivers a super smooth scroll, with optimized refresh rate, and a fast touch response gives seamless visuals in both work and play",
@@ -164,7 +178,7 @@ export const products = [
     stock: 50,
   },
   {
-    id: "6200dc30a7a81c7b7cba7e85",
+    id: "9",
     name: "WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones",
     description: [
       "Industry-leading noise canceling with Dual Noise Sensor technology",
@@ -179,19 +193,5 @@ export const products = [
     categoryId: "6200dc30a7a81c7b7cba7e72",
     price: 298,
     stock: 100,
-  },
-  {
-    id: "6200dc30a7a81c7b7cba7e83",
-    name: "Galaxy Chromebook - 13.3 inches - 8 GB RAM",
-    description: [
-      "Crystal clarity. Vivid color: Experience superior picture quality and fully expansive color, contrast and depth with the 4K AMOLED touchscreen display to take your work and play to the next level.",
-      "Split-second productivity: Boot up in as fast as 6 seconds and hit the ground running. Get ample storage with 256GB SSD and work, play and multitask seamlessly.",
-      "Stroke of genius: Take notes, sketch ideas and edit documents easily and accurately with the built-in pen that fits seamlessly into Galaxy Chromebook's ultra-slim design.",
-      "Speedy. Simple. Secure: Chrome OS is the speedy, simple and secure operating system that powers Chromebooks. It is designed to feel intuitive and helpful every step of the way. It comes with the Google Assistant which helps you multitask and control smart devices. Plus, with apps from the Google Play Store, you can get work done, watch your favorite shows or play your favorite games.",
-    ],
-    manufacturerId: "6200dc30a7a81c7b7cba7e78",
-    categoryId: "6200dc2fa7a81c7b7cba7e6b",
-    price: 689.26,
-    stock: 200,
   },
 ];
