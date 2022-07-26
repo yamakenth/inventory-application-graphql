@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
   {
     id: "6200dc2fa7a81c7b7cba7e6b",
     name: "Laptop",
@@ -25,14 +25,14 @@ const categories = [
   },
 ];
 
-const manufactureres = [
+export const manufactureres = [
   { id: "6200dc30a7a81c7b7cba7e74", name: "Apple" },
   { id: "6200dc30a7a81c7b7cba7e76", name: "Dell" },
   { id: "6200dc30a7a81c7b7cba7e78", name: "Samsung" },
   { id: "6200dc30a7a81c7b7cba7e7a", name: "Sony" },
 ];
 
-const products = [
+export const products = [
   {
     id: "6200dc30a7a81c7b7cba7e7c",
     name: "iPhone 11 [128GB, Purple]",
@@ -93,7 +93,7 @@ const products = [
     name: "XPS 13 9310 - 13.4 inches - 16 GB RAM",
     description: [
       "See Every Detail: The FHD+ (1920 x 1200) 500-nit touchscreen display offers pinpoint accuracy for all your computing needs. See the detail of every pixel in photos without needing to zoom in.",
-      "Guaranteed Power: With 11th Gen InteI Core mobile processors, it’s now possible to enjoy incredibly immersive entertainment on a remarkably thin and light touchscreen laptop.",
+      "Guaranteed Power: With 11th Gen InteI Core mobile processors, it's now possible to enjoy incredibly immersive entertainment on a remarkably thin and light touchscreen laptop.",
       "Powerful Graphics: Intel Iris Plus graphics take a huge leap forward in gaming, streaming and creativity, pushing a smoother, more detailed and more vivid experience than ever before.",
       "Killer Wireless: The XPS 9310 thin laptop is built with Wi-Fi 6 techology, the AX1650 prioritizes streaming video, communication, and game traffic in your system for fast, smooth online experiences.",
       "Advanced Thermal Engineering: Dual fans separated to spread heat over a larger area ensure you have the best performing system in the thinnest form factor possible.",
