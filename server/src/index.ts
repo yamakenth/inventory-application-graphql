@@ -1,8 +1,12 @@
+import "dotenv/config";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
+import connectDB from "./config/db";
 import { schema } from "./schema";
 
 const app = express();
+
+connectDB();
 
 app.use(
   "/graphql",
