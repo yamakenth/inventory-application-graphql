@@ -7,6 +7,7 @@ import {
   EditManufacturer,
 } from "./manufacturer/mutation";
 import { GetManufacturer, GetManufacturers } from "./manufacturer/query";
+import { GetProduct, GetProducts } from "./product/query";
 
 const Query = new GraphQLObjectType({
   name: "Query",
@@ -15,6 +16,8 @@ const Query = new GraphQLObjectType({
     categories: GetCategories,
     manufacturer: GetManufacturer,
     manufacturers: GetManufacturers,
+    product: GetProduct,
+    products: GetProducts,
   },
 });
 
