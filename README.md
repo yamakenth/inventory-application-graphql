@@ -1,4 +1,4 @@
-# Blog API Server
+# Inventory Application GraphQL Server
 
 > An Express sever for an inventory management application buit using GraphQL.
 
