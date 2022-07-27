@@ -1,4 +1,5 @@
 import Product from "../../models/product";
+import { products } from "../../sampleData";
 
 export function getProduct(id: string) {
   return Product.findById(id);
@@ -6,6 +7,10 @@ export function getProduct(id: string) {
 
 export function getProducts() {
   return Product.find();
+}
+
+export function getProductsByCategoryId(categoryId: string) {
+  return Product.find({ categoryId: categoryId });
 }
 
 export function addProduct(args: {

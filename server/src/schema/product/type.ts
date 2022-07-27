@@ -11,7 +11,7 @@ import { CategoryType } from "../category/type";
 import { getManufacturer } from "../manufacturer/resolver";
 import { ManufacturerType } from "../manufacturer/type";
 
-export const ProductType = new GraphQLObjectType({
+export const ProductType: GraphQLObjectType<any, any> = new GraphQLObjectType({
   name: "Product",
   fields: () => ({
     id: { type: GraphQLID },
